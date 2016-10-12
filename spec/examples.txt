@@ -1,0 +1,16 @@
+example_id                                                  | status | run_time        |
+----------------------------------------------------------- | ------ | --------------- |
+./spec/controllers/invoices_controller_spec.rb[1:1:1]       | passed | 0.10715 seconds |
+./spec/controllers/summary_controller_spec.rb[1:1:1:1]      | passed | 0.02987 seconds |
+./spec/controllers/summary_controller_spec.rb[1:1:2:1]      | passed | 0.02959 seconds |
+./spec/routing/invoice_routing_spec.rb[1:1:1]               | passed | 0.00625 seconds |
+./spec/routing/invoice_routing_spec.rb[1:2:1]               | passed | 0.00182 seconds |
+./spec/routing/invoice_routing_spec.rb[1:2:2]               | passed | 0.00171 seconds |
+./spec/serializers/category_serializer_spec.rb[1:1]         | passed | 0.00178 seconds |
+./spec/serializers/client_serializer_spec.rb[1:1]           | passed | 0.03222 seconds |
+./spec/serializers/invoice_serializer_spec.rb[1:1]          | passed | 0.01131 seconds |
+./spec/serializers/invoice_serializer_spec.rb[1:2]          | passed | 0.01477 seconds |
+./spec/serializers/invoice_serializer_spec.rb[1:3]          | passed | 0.01449 seconds |
+./spec/serializers/summary/category_serializer_spec.rb[1:1] | passed | 0.01364 seconds |
+./spec/serializers/summary/category_serializer_spec.rb[1:2] | passed | 0.01019 seconds |
+./spec/serializers/summary/months_serializer_spec.rb[1:1]   | passed | 0.01111 seconds |
