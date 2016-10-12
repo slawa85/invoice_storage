@@ -10,9 +10,17 @@ gem 'pg'
 
 gem 'active_model_serializers', '~> 0.10.0'
 
+gem 'rack-cors', :require => 'rack/cors'
+
 group :development, :test do
   gem 'pry'
   gem 'pry-byebug'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 # To use ActiveModel has_secure_password
