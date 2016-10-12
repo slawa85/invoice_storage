@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: "2.1"
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+Style/Encoding:
+  Enabled: true
+Metrics/LineLength:
+  Max: 80
