@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Summary::MonthsSerializer do
+  let!(:first_invoice) { FactoryGirl.create(:invoice) }
   subject {  Summary::MonthsSerializer.new(sample) }
 
   it 'includes the expected attributes' do
@@ -13,6 +14,6 @@ RSpec.describe Summary::MonthsSerializer do
   end
 
   def sample
-    @sample ||= FactoryGirl.build(:invoice)
+    @sample ||= Invoice.months_summary.first
   end
 end

@@ -14,9 +14,9 @@ csv.each do |row|
   invoice_nb, invoice_price,
   vat_rate, issued_at, category = row.to_s.split(',')
 
-  company = Company.create(number: company_number)
-  client = Client.create!(name: client_name, company: company)
-  category = Category.create!(name: category)
+  company = Company.find_or_create_by!(number: company_number)
+  client = Client.find_or_create_by!(name: client_name, company: company)
+  category = Category.find_or_create_by!(name: category)
 
   vat_amount = (invoice_price.to_f * vat_rate.to_i) / 100
   price_with_vat = (invoice_price.to_f + vat_amount).round(2)

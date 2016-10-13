@@ -15,7 +15,7 @@ RSpec.describe 'API routes' do
       expect(get: '/api/v1/summary/months').to route_to(
         action: 'index',
         controller: 'summary',
-        order: 'months'
+        summary: 'months'
       )
     end
 
@@ -23,7 +23,7 @@ RSpec.describe 'API routes' do
       expect(get: '/api/v1/summary/categories').to route_to(
         action: 'index',
         controller: 'summary',
-        order: 'categories'
+        summary: 'categories'
       )
     end
   end

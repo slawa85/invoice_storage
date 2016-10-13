@@ -1,6 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe Summary::CategoriesSerializer do
+  let!(:category) { FactoryGirl.create(:category) }
+  let!(:first_invoice) { FactoryGirl.create(:invoice, category: category ) }
+
   subject do
     ActiveModelSerializers::Adapter.create(sample_serializer)
   end
@@ -22,7 +25,8 @@ RSpec.describe Summary::CategoriesSerializer do
   end
 
   def sample_resource
-    @sample_resource ||= FactoryGirl.build(:invoice)
+    invoice = Invoice.categories_summary.first
+    @sample_resource ||= invoice
   end
 
   def sample_serializer
